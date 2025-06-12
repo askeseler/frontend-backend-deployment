@@ -67,7 +67,7 @@ async def send_signup_mail(request: Request):
         if not response["success"]:
             raise HTTPException(status_code=401, detail=response)
 
-    base_url = str('{uri.scheme}://{uri.netloc}/'.format(uri=request.url))
+    base_url = str('https://{uri.netloc}/'.format(uri=request.url))
     #access_token = secrets.token_urlsafe(30*3//4)
     #sign_up_token = access_token + "&" + email
     #sign_up_tokens.append(sign_up_token)
