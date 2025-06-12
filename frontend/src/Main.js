@@ -28,6 +28,8 @@ class Main extends React.Component {
     }
   
     componentDidMount() {
+      let page = new URL(window.location.href).pathname.slice(1)
+      this.setState({ page: page });
       this.mapLinksToState();
     }
 
